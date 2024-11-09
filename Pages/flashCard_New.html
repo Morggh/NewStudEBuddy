@@ -4,50 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <link rel="stylesheet" href="mainStyle.css">
+   <!--<link rel="stylesheet" href="styles.css"> -->
+    <script src="script.js"></script>
 </head>
 
-<script>
-    let cardSet = [];
-
-    function addCardToSet(){
-        //identify values
-        const cardFront = document.getElementById('cardFront').value;
-        const cardBack = document.getElementById('cardBack').value;
-        alert(cardFront)
-        alert(cardBack)
-   
-        //add to local array
-        const cardTotal = [cardFront, cardBack]
-        cardSet.push(cardFront , cardBack);
-        alert(cardTotal);
-
-        //update array display
-        updateCardList()
-    }
-
-function updateCardList(){
-//identify display location
-const postCardContainer = document.getElementById("setContent");
-postCardContainer.textContent = JSON.stringify(cardSet);
-
-}
-
-
-
-
-function fillTable(){
-   
-
-    postCard.classList.add(cardFront, cardBack);
-
-    postCardContainer.appendChild(postCard);
-}
-</script>
 
 <body>
     <header>
-        <a href="index.html" class="button">Go to Landing Page</a>
+        <a href="landing.html" class="button">Go to Landing Page</a>
     </header>
     <section class="createNewCard">
         <h1>New Study Set</h1>
@@ -61,7 +25,18 @@ function fillTable(){
     </section>
 
     <section class="displayCardSet">
-        <p id="setContent">[]</p>
+        <h2 style="color:pink;">Study Set Name</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Front</th>
+                    <th>Back</th>
+                </tr>
+            </thead>
+            <tbody id="cardSet">
+
+            </tbody>
+        </table>
     </section>
 
 
