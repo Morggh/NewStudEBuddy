@@ -7,9 +7,3 @@ exports.index = (req, res) => {
     title: 'Home'
   });
 };
-
-exports.flashCardCreate = (req, res) => {
-  res.render('flashCard_New', {
-      title: 'New Study Set'
-  });
-};
