@@ -49,4 +49,4 @@ async function defineRequest(prompt) {
       throw new Error("Failed to retrieve flashcards.");
     }
 }
-export { defineRequest };
+module.exports={ defineRequest };
