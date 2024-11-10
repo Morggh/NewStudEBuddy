@@ -53,7 +53,7 @@ const apiController = require('./controllers/api');
 const contactController = require('./controllers/contact');
 const flashcardsController = require('./controllers/flashCards');
 const sourceController = require('./controllers/source')
-
+const openaiController = require('./service/openAPIservice')
 /**
  * API keys and Passport configuration.
  */
@@ -142,9 +142,10 @@ app.use('/webfonts', express.static(path.join(__dirname, 'node_modules/@fortawes
  * Primary app routes.
  */
 app.get('/', homeController.index);
-app.post('/', flashcardsController.sendCard);
+//app.post('/', flashcardsController.sendCard);
 app.get('/create_resource', sourceController.renderForm);
 app.post('/create_resource', flashcardsController.sendCardSet)
+app.post('/create_resource/data', openaiController.defineRequest)
 // app.get('/cardsOverviewForm', flashcardsController.renderOverviewForm);
 app.get('/cardsOverviewSets', flashcardsController.getCardSets);
 app.get('/login', userController.getLogin);
@@ -165,11 +166,10 @@ app.post('/account/profile', passportConfig.isAuthenticated, userController.post
 app.post('/account/password', passportConfig.isAuthenticated, userController.postUpdatePassword);
 app.post('/account/delete', passportConfig.isAuthenticated, userController.postDeleteAccount);
 app.get('/account/unlink/:provider', passportConfig.isAuthenticated, userController.getOauthUnlink);
-app.post('/create_resource', (req, res) => {
+app.post('/submit', (req, res) => {
   // Capture the text input from the form and store it in a variable
   const userInput = req.body.userInput;
   // You can now use the `userInput` variable as needed
-  res.send(`You entered: ${userInput}`); // Send a response back to the client
   res.redirect('/create_resource');
 });
 
