@@ -142,6 +142,7 @@ app.use('/webfonts', express.static(path.join(__dirname, 'node_modules/@fortawes
  * Primary app routes.
  */
 app.get('/', homeController.index);
+app.post('/', flashcardsController.sendCard);
 app.get('/flashCard_New', flashcardsController.renderForm); 
 app.get('/sourcesInput' , sourceController.renderForm);
 app.get('/login', userController.getLogin);
