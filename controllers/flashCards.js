@@ -26,17 +26,16 @@ exports.sendCardSet = async (req, res) => {
       const userId = req.user._id;
   
       // Find flash card sets that belong to the logged-in user
-      const flashCardSets = await FlashCardSet.find({ userId }) || [];  // Ensure an array is always returned
+      const flashCardSets = await Flash_card_set.find({ userId }) || [];  // Ensure an array is always returned
   
       // Log the flashCardSets to check the data
       console.log(flashCardSets) + 'TEST';
   
       // Render the Pug template and pass the data (ensure it's always an array)
-      res.render('flashCardSets', { flashCardSets });
+      res.render('cardsOverview', { flashCardSets });
   
     } catch (error) {
       console.error(error);
-      res.render('cardsOverview', { flashCardSets: [] });
     }
   };
 
@@ -52,8 +51,8 @@ exports.sendCard = async (req, res) => {
   }
 };
 
-exports.renderOverviewForm = (req, res) => {
+/*exports.renderOverviewForm = (req, res) => {
   res.render('cardsOverview', { title: 'Data Sets' });
   this.getCardSets
-};
+};*/
 
