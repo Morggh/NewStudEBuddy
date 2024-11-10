@@ -20,8 +20,8 @@ block content
           th(style="text-align:center;") Topic 
       tbody
         each set in flashCardSets 
-          tr(style=index % 2 ===0 ? background-color:#BADFE1;)
-            td(style="border:3px solid darkblue; background-color:#BADFE1; opacity:0.5;") #{set.name}
+          tr(style="index % 2 ===0 ? background-color:#BADFE1; opacity:0.5;")
+            td(style="border:3px solid darkblue; background-color:#BADFE1;") #{set.name}
             td(style="border:3px solid darkblue;") #{set.topic}
 
     //- table(style="width:80%; margin:auto; border:3px darkblue; box-shadow:5px 3px 3px darkgrey;")
