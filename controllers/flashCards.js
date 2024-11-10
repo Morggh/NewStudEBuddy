@@ -8,6 +8,7 @@ exports.sendCardSet = async (req, res) => {
       name: req.body.name,
       topic: req.body.topic
     });
+    console.log(Flash_card_set)
     await flash_card_set.save();
     res.redirect('/create_resource');
   } catch (error) {
@@ -33,7 +34,7 @@ exports.sendCardSet = async (req, res) => {
       console.log(userId);
   
       // Render the Pug template and pass the data (ensure it's always an array)
-      res.render('cardsOverview', { term: term,  Flash_card_set: Flash_card_set });
+      res.render('cardsOverview', { name: name,  Flash_card_set: Flash_card_set });
   
     } catch (error) {
       console.error(error);
