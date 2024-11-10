@@ -1,7 +1,7 @@
 extends layout
 
 mixin box(title, topic)
-  div(style="display:flex; border:5px solid green;").box
+  div.box
   h3= title
   h5= topic
   block 
@@ -12,10 +12,10 @@ block content
 
   hr
   .row
-    .col-md-6
+    .col-md-6(style='display:flex; border:5px solid lightblue;')
       h2 My Sets
       div(style="display:flex; gap:30px;")
-        +box('Title 1', 'topic')
+        +box('Title 1', 'topic', style="background-color:pink;")
           <br> 
         +box('Title 2', 'topic2')
           <br>
