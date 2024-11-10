@@ -15,6 +15,25 @@ exports.sendCardSet = async (req, res) => {
   }
 };
 
+exports.getCardSets = async (req, res) => {
+  try {
+    // Check if the user is authenticated
+    if (!req.isAuthenticated()) {
+        return res.status(401).json({ message: 'Unauthorized' });
+    }
+
+    // Get the userId from the logged-in user
+    const userId = req.user._id;
+
+    // Find flash card sets that belong to the logged-in user
+    const flashCardSets = await FlashCardSet.find({ userId });
+
+    res.status(200).json(flashCardSets);
+  }catch (error) {
+    res.status(500).json({ message: 'Error fetching flash card sets', error });
+  }
+}
+
 exports.sendCard = async (req, res) => {
   try {
     const flashcard = new Flashcard({
