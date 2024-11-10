@@ -16,6 +16,7 @@ exports.sendCardSet = async (req, res) => {
 };
 
 exports.getCardSets = async (req, res) => {
+  window.alert('hit 1');
   try {
     // Check if the user is authenticated
     if (!req.isAuthenticated()) {
@@ -26,6 +27,7 @@ exports.getCardSets = async (req, res) => {
 
     // Find flash card sets that belong to the logged-in user
     const flashCardSets = (await FlashCardSet.find({ userId })) || [];
+    console.log(flashCardSets);
 
     // Render the Pug template and pass the data (ensure it's always an array)
     res.render('flashCardSets', { flashCardSets });
