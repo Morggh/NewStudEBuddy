@@ -8,7 +8,7 @@ exports.sendCardSet = async (req, res) => {
       name: req.body.name,
       topic: req.body.topic
     });
-    await flashcard.save();
+    await flash_card_set.save();
     res.redirect('/create_resource');
   } catch (error) {
     res.status(500).send("Error generating flash card set: " + error.message); // Send error response
