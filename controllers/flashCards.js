@@ -31,6 +31,7 @@ exports.sendCardSet = async (req, res) => {
       // Log the flashCardSets to check the data
       console.log(flashCardSets);
       console.log(userId);
+      console.log(db.Flash_card_set.find({userId:'6730864d2c5a844d3eeb5337'}))
   
       // Render the Pug template and pass the data (ensure it's always an array)
       res.render('cardsOverview', { flashCardSets });
