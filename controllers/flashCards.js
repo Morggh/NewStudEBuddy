@@ -32,11 +32,10 @@ exports.sendCardSet = async (req, res) => {
       console.log(flashCardSets);
   
       // Render the Pug template and pass the data (ensure it's always an array)
-      res.render('flashCardSets', { flashCardSets });
+      res.render('cardsOVerview', { flashCardSets });
   
     } catch (error) {
       console.error(error);
-      res.render('cardsOverview', { flashCardSets: [] });
     }
   };
 
