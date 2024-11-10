@@ -1,6 +1,6 @@
 const Flashcard = require('../models/Flash_card');
 const Flash_card_set = require('../models/Flash_card_set');
-const User = require('../models/User'); // Import the User model 
+  
 
 exports.sendCardSet = async (req, res) => {
   try {
@@ -8,7 +8,6 @@ exports.sendCardSet = async (req, res) => {
       name: req.body.name,
       topic: req.body.topic
     });
-    console.log(Flash_card_set)
     await flash_card_set.save();
     res.redirect('/create_resource');
   } catch (error) {
@@ -27,14 +26,14 @@ exports.sendCardSet = async (req, res) => {
       const userId = req.user._id;
   
       // Find flash card sets that belong to the logged-in user
-      const flashCardSets = await Flash_card_set.find({});  // Ensure an array is always returned
+      const flashCardSets = await Flash_card_set.find({ userID: userId });  // Ensure an array is always returned
   
       // Log the flashCardSets to check the data
       console.log(flashCardSets);
-      console.log(userId);
+      console.log(userID);
   
       // Render the Pug template and pass the data (ensure it's always an array)
-      res.render('cardsOverview', { name: req.body.name,  Flash_card_set: Flash_card_set });
+      res.render('cardsOverview', { flashCardSets });
   
     } catch (error) {
       console.error(error);
