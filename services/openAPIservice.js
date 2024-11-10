@@ -21,7 +21,7 @@ try {
         method: "POST",
         headers: {
             "Content-Type": "application/json",
-            "Authorization": `Bearer <API TOKEN>` // Replace with your actual API key
+            "Authorization": `Bearer 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` // Replace with your actual API key
         },
         body: JSON.stringify(requestData)
     });
