@@ -16,6 +16,7 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 const multer = require('multer');
 const rateLimit = require('express-rate-limit');
+const {addCard, getWholeSet } = require('./controllers/flashCards');
 
 const upload = multer({ dest: path.join(__dirname, 'uploads') });
 
@@ -140,7 +141,7 @@ app.use('/webfonts', express.static(path.join(__dirname, 'node_modules/@fortawes
  * Primary app routes.
  */
 app.get('/', homeController.index);
-app.get('/flashCard_New', flashcardsController.flashcardCreate);
+app.get('/flashCard_New', flashcardsController.renderForm); 
 app.get('/login', userController.getLogin);
 app.post('/login', userController.postLogin);
 app.get('/logout', userController.logout);
