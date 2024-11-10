@@ -12,16 +12,25 @@ block content
                     p #{set.topic}
     else
         p You have no flash card sets.
-.col-md-6
-//- table(style="width:80%; margin:auto; border:3px darkblue; box-shadow:5px 3px 3px darkgrey;")
-//-   thead 
-//-     tr
-//-       th(style="text-align:center; border:2px darkblue") Title 
-//-       th(style="text-align:center;") Topic 
-//-     tbody
-//-       each set in flashCardSets 
-//-       tr 
-//-         td(style="border:3px darkblue;") #{set.name}
-//-         td(style="border:3px solid darkblue;") #{set.topic}
-console.log(flashCardSets);
-res.render('Study Cards', {set});
+    .col-md-6
+    table(style="width:80%; margin:auto; border:3px darkblue; box-shadow:5px 3px 3px darkgrey;")
+      thead 
+        tr
+          th(style="text-align:center; border:2px darkblue") Title 
+          th(style="text-align:center;") Topic 
+      tbody
+        each set in flashCardSets 
+          tr 
+            td(style="border:3px darkblue;") #{set.name}
+            td(style="border:3px solid darkblue;") #{set.topic}
+
+    //- table(style="width:80%; margin:auto; border:3px darkblue; box-shadow:5px 3px 3px darkgrey;")
+    //- thead 
+    //-     tr
+    //-     th(style="text-align:center; border:2px darkblue") Title 
+    //-     th(style="text-align:center;") Topic 
+    //- tbody
+    //-     each set in flashCardSets 
+    //-     tr 
+    //-         td(style="border:3px darkblue;") #{set.name}
+    //-         td(style="border:3px solid darkblue;") #{set.topic}
