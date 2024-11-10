@@ -50,5 +50,3 @@ Thumbs.db
 .Trashes
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
-controllers/flashCards.js
-services/openAPIservice.js
