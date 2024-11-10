@@ -54,5 +54,5 @@ exports.sendCard = async (req, res) => {
 /*exports.renderOverviewForm = (req, res) => {
   res.render('cardsOverview', { title: 'Data Sets' });
   this.getCardSets
-};\*
+};*/
 
