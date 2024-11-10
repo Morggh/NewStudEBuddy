@@ -52,7 +52,6 @@ const userController = require('./controllers/user');
 const apiController = require('./controllers/api');
 const contactController = require('./controllers/contact');
 const flashcardsController = require('./controllers/flashCards');
-const sourceController = require('./controllers/source');
 
 /**
  * API keys and Passport configuration.
@@ -144,7 +143,8 @@ app.use('/webfonts', express.static(path.join(__dirname, 'node_modules/@fortawes
 app.get('/', homeController.index);
 app.post('/', flashcardsController.sendCard);
 app.get('/flashCard_New', flashcardsController.renderForm); 
-app.get('/create_resource', sourceController.renderForm);
+app.get('/create_resource', flashcardsController.renderForm);
+app.post('/create_resource', flashcardsController.sendCardSet);
 app.get('/login', userController.getLogin);
 app.post('/login', userController.postLogin);
 app.get('/logout', userController.logout);
