@@ -45,8 +45,9 @@ async function defineRequest(req, res, prompt) {
           
           // Wait for all flashcards to be saved
           await Promise.all(flashcardPromises);
-          
+
         res.json({ message: "Flashcard set and flashcards saved successfully." });
+        res.redirect('/cardsOverviewSets')
 
     } catch (error) {
         console.error("Error processing flashcards:", error);
