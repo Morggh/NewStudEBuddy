@@ -165,11 +165,12 @@ app.post('/account/profile', passportConfig.isAuthenticated, userController.post
 app.post('/account/password', passportConfig.isAuthenticated, userController.postUpdatePassword);
 app.post('/account/delete', passportConfig.isAuthenticated, userController.postDeleteAccount);
 app.get('/account/unlink/:provider', passportConfig.isAuthenticated, userController.getOauthUnlink);
-app.post('/submit', (req, res) => {
+app.post('/create_resource', (req, res) => {
   // Capture the text input from the form and store it in a variable
   const userInput = req.body.userInput;
   // You can now use the `userInput` variable as needed
   res.send(`You entered: ${userInput}`); // Send a response back to the client
+  res.redirect('/create_resource');
 });
 
 /**
