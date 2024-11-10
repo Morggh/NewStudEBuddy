@@ -18,7 +18,7 @@ block content
         +box('Title 1', 'topic')
         +box('Title 2', 'topic2')
           <br>
-          p(style="align-self:flex-end; margin-top:10px;") topic2
+          p(style="align-self:flex-end; margin-top:10px;")
       a.btn.btn-primary(href='/cardsOverview', role='button') Show all sets »
     .col-md-6
       h2 Quick Start
@@ -26,6 +26,6 @@ block content
         p Passage to generate from:
         input(type='hidden', name='_csrf', value=_csrf)
         input(type="submit", href="cardsOverview" style="margin:5px; box-shadow: 3px 3px 5px black;")
-        input(type="text", name="term", placeholder=" " style="height:500px; width:600px; box-shadow:3px 3px 5px darkgrey;")
+        input(type="text", name="term", placeholder=" " value="Generate Flash Cards" style="height:500px; width:600px; box-shadow:3px 3px 5px darkgrey;")
 
       
