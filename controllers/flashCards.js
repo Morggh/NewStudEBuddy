@@ -15,28 +15,30 @@ exports.sendCardSet = async (req, res) => {
   }
 };
 
-exports.getCardSets = async (req, res) => {
-  window.alert('hit 1');
-  try {
-    // Check if the user is authenticated
-    if (!req.isAuthenticated()) {
-        return res.status(401).json({ message: 'Unauthorized' });
+  exports.getCardSets = async (req, res) => {
+    try {
+      // Check if the user is authenticated
+      if (!req.isAuthenticated()) {
+          return res.status(401).json({ message: 'Unauthorized' });
+      }
+  
+      // Get the userId from the logged-in user
+      const userId = req.user._id;
+  
+      // Find flash card sets that belong to the logged-in user
+      const flashCardSets = await FlashCardSet.find({ userId }) || [];  // Ensure an array is always returned
+  
+      // Log the flashCardSets to check the data
+      console.log(flashCardSets);
+  
+      // Render the Pug template and pass the data (ensure it's always an array)
+      res.render('flashCardSets', { flashCardSets });
+  
+    } catch (error) {
+      console.error(error);
+      res.render('cardsOverview', { flashCardSets: [] });
     }
-    // Get the userId from the logged-in user
-    const userId = req.user._id;
-
-    // Find flash card sets that belong to the logged-in user
-    const flashCardSets = (await FlashCardSet.find({ userId })) || [];
-    console.log(toString(flashCardSets));
-
-    // Render the Pug template and pass the data (ensure it's always an array)
-    res.render('flashCardSets', { flashCardSets });
-
-    res.status(200).json(flashCardSets);
-  }catch (error) {
-    res.render('cardsOverview', { flashCardSets: [] });
-  }
-}
+  };
 
 exports.sendCard = async (req, res) => {
   try {
@@ -52,5 +54,6 @@ exports.sendCard = async (req, res) => {
 
 exports.renderOverviewForm = (req, res) => {
   res.render('cardsOverview', { title: 'Data Sets' });
+  this.getCardSets
 };
 
