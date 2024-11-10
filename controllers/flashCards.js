@@ -1,3 +1,4 @@
+const Flashcard = require('../models/Flash_card');
 exports.renderForm = (req, res) => {
     res.render('flashCard_New', { title: 'User Input Form' });
   };
