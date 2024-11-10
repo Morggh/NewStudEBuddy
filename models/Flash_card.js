@@ -4,7 +4,7 @@ const flash_cardSchema = new mongoose.Schema({
     term: String,
     content: String
 });
-//alert(term)
+alert(term)
 const Flashcard = mongoose.model('flashcards', flash_cardSchema);
 
 module.exports = Flashcard;
