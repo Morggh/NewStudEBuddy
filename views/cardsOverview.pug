@@ -2,7 +2,7 @@ extends layout
 block content 
   h2 My Sets
     //Check if there are any flash card sets
-    if flashCardSets.length > 0
+    if flashCardSets[0] !=empty
         ul
             each set in flashCardSets
                 li
