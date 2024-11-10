@@ -3,7 +3,7 @@ exports.renderForm = (req, res) => {
   };
   
 exports.sendCard = async (req, res) => {
-    const term = new flashcard({
+    const flashcard = new Flashcard({
       term: req.body.term,
     });
     await flashcard.save();
