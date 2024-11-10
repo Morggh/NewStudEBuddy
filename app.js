@@ -53,6 +53,7 @@ const apiController = require('./controllers/api');
 const contactController = require('./controllers/contact');
 const flashcardsController = require('./controllers/flashCards');
 const sourceController = require('./controllers/source');
+const Flash_card_setController = require('./controllers/flashCardSet');
 
 /**
  * API keys and Passport configuration.
@@ -145,6 +146,7 @@ app.get('/', homeController.index);
 app.post('/', flashcardsController.sendCard);
 app.get('/flashCard_New', flashcardsController.renderForm); 
 app.get('/create_resource', sourceController.renderForm);
+app.get('/cardsOverview', Flash_card_setController.);
 app.get('/login', userController.getLogin);
 app.post('/login', userController.postLogin);
 app.get('/logout', userController.logout);
