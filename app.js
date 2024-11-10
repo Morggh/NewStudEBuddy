@@ -170,7 +170,7 @@ app.post('/submit', (req, res) => {
   // Capture the text input from the form and store it in a variable
   const userInput = req.body.userInput;
   // You can now use the `userInput` variable as needed
-  res.redirect('create_resource');
+  res.redirect('/create_resource');
 });
 
 /**
