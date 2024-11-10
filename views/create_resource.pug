@@ -16,10 +16,10 @@ mixin box(title)
 block content
   .col-md-6
     h2 Create New Study Set
-    form(href='/', method="POST" style=" display:flex; border:5px solid pink; justify-content:center; height:300px;")
+    form(href='/', method="POST" style=" display:flex; border:5px solid pink; justify-content:center; ")
       p Content to generate from :
         input(type='hidden', name='_csrf', value=_csrf)
-        input(type="text", name="term", placeholder=" " width:90%; )
+        input(type="text", name="term", placeholder=" " style=" width:90%; height:300px;" )
         input(type="submit", class="btnNew")
 
   .col-md-6 
