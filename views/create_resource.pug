@@ -17,7 +17,7 @@ block content
   .col-md-6
     h2 Create New Study Set
     form(href='/', method="POST" style="")
-      p(style="text-align:center;") Content to generate from :
+      p(style="text-decoration:underline;") Content to generate from :
         input(type='hidden', name='_csrf', value=_csrf)
         input(type="text", name="term", placeholder=" " style=" width:900px; height:300px; margin:auto; " )
         input(type="submit", class="btnNew")
