@@ -1,22 +1,3 @@
-.btnNew{
-background-color: #007bff; /* Bootstrap-like blue */
-color: white;
-border: 1px solid #007bff;
-border-radius: 4px;
-padding: 10px 20px;
-font-size: 16px;
-text-align: center;
-cursor: pointer;
-transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.btnNew:hover {
-background-color: #70467C; 
-transform: scale(1.05); 
-color:white;
-}
-
-.btnNew:active {
-background-color: #003f7f; /* Even darker blue on click */
-transform: scale(1); /* Reset scale */
+body{
+    backgorund-color:lightpink;
 }

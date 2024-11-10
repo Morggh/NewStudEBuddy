@@ -1,23 +1,32 @@
 extends layout
+
+mixin box(title)
+  div.box
+  h3= title
+  block 
+
 block content
   h1 StudEBuddy
   p.lead Study Smarter
+
   hr
   .row
     .col-md-6
       h2 My Sets
-      p 
-      p
-        a.btn.btn-primary(href='cardsOverview', role='button') View details »
+      div(style="display:flex;")
+        +box('Title 1')
+          p topic 
+        +box('Title 2')
+          p topic2
+      a.btn.btn-primary(href='/cardsOverview', role='button') Show all sets »
     .col-md-6
-      h2 Heading
-      p Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-      p
-        a.btn.btn-primary(href='#', role='button') View details »
-    .col-md-6
-      h2 Text Box
+      h2 Quick Start
       form(href ='/', method="POST")
         p Title:
         input(type='hidden', name='_csrf', value=_csrf)
         input(type="text", name="term", placeholder=" ")
         input(type="submit", class="btnNew")
+    .col-md-6
+      h2 Quick Start
+      a.btn.btn-primary(href='#', role='button') View details »
+      
