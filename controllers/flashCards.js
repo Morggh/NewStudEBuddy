@@ -10,7 +10,7 @@ exports.sendCard = async (req, res) => {
       term: req.body.term,
     });
     await flashcard.save();
-    res.status(201).send("Flashcard saved successfully!"); // Send success response
+    res.redirect('/')
   } catch (error) {
     res.status(500).send("Error saving flashcard: " + error.message); // Send error response
   }
