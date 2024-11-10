@@ -1,23 +1,23 @@
 extends layout
 block content
-header
-  a.button(href='landing.html') Go to Landing Page
-section.createNewCard
-  h1 New Study Set
-  form
-    label(for='') Term
-    input#cardFront(type='text' name='cardFront')
-    br
-    label(for='') Content
-    input#cardBack(type='text' name='cardBack')
-    br
-    button(type='submit' onclick='addCardToSet()') Create Card
-section.displayCardSet
-  h2(style='color:pink;') Study Set Name
-  table
-    thead
-      tr
-        th Front
-        th Back
-    tbody#cardSet
+  header
+    a.button(href='landing.html') Go to Landing Page
+  section.createNewCard
+    h1 New Study Set
+    form
+      label(for='') Term
+      input#cardFront(type='text' name='cardFront')
+      br
+      label(for='') Content
+      input#cardBack(type='text' name='cardBack')
+      br
+      button(type='submit' onclick='addCardToSet()') Create Card
+  section.displayCardSet
+    h2(style='color:pink;') Study Set Name
+    table
+      thead
+        tr
+          th Front
+          th Back
+      tbody#cardSet
 
