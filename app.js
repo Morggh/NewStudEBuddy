@@ -145,8 +145,8 @@ app.get('/', homeController.index);
 app.post('/', flashcardsController.sendCard);
 app.get('/create_resource', sourceController.renderForm);
 app.post('/create_resource', flashcardsController.sendCardSet)
-app.get('/cardsOverview', flashcardsController.renderOverviewForm);
-app.get('/cardsOverview', flashcardsController.renderOverviewForm);
+app.get('/cardsOverview/form', flashcardsController.renderOverviewForm);
+app.get('/cardsOverview/sets', flashcardsController.getCardSets);
 app.get('/login', userController.getLogin);
 app.post('/login', userController.postLogin);
 app.get('/logout', userController.logout);
