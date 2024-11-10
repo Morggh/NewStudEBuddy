@@ -1,3 +1,20 @@
 extends layout 
 block content 
-  h2 My Sets 
+  h2 My Sets
+    //Check if there are any flash card sets
+    if flashCardSets.length > 0
+        ul
+            each set in flashCardSets
+                li
+                    h2 #{set.title}
+                    p #{set.description}
+                    ul
+                        each card in set.cards
+                            li
+                                strong Question: 
+                                    #{card.question}
+                                br
+                                strong Answer: 
+                                    #{card.answer}
+        else
+            p You have no flash card sets.
