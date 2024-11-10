@@ -142,7 +142,6 @@ app.use('/webfonts', express.static(path.join(__dirname, 'node_modules/@fortawes
  */
 app.get('/', homeController.index);
 app.post('/', flashcardsController.sendCard);
-/*app.get('/flashCard_New', flashcardsController.renderForm); */
 app.get('/create_resource', flashcardsController.renderForm);
 app.post('/create_resource', flashcardsController.sendCardSet)
 app.get('/cardsOverview', flashcardsController.renderForm);
