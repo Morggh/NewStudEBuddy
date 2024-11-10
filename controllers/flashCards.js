@@ -29,7 +29,7 @@ exports.sendCardSet = async (req, res) => {
       const flashCardSets = await FlashCardSet.find({ userId }) || [];  // Ensure an array is always returned
   
       // Log the flashCardSets to check the data
-      console.log(flashCardSets);
+      console.log(flashCardSets) + 'TEST';
   
       // Render the Pug template and pass the data (ensure it's always an array)
       res.render('flashCardSets', { flashCardSets });
