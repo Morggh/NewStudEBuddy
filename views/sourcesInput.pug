@@ -9,6 +9,7 @@ mixin cardList(cards)
 
 mixin box(title)
   div.box
+  block 
 
 
 block content 
@@ -20,5 +21,5 @@ block content
         input(type="submit")
     .col-md-6 
     +box('Testing Title')
-    +flashCardSet(['test', 'test 2' , 'test 3'])
-    +flashCardSet(['example1', 'example2'])
+      +flashCardSet(['test', 'test 2' , 'test 3'])
+      +flashCardSet(['example1', 'example2'])
