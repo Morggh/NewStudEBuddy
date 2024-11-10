@@ -13,7 +13,7 @@ async function defineRequest(prompt) {
         ],
         max_completion_tokens: 20000
         }
-};
+
 
     try {
         // Send the request to OpenAI
@@ -48,5 +48,5 @@ async function defineRequest(prompt) {
       console.error("Error fetching data from OpenAI:", error);
       throw new Error("Failed to retrieve flashcards.");
     }
-
+}
 export { defineRequest };
