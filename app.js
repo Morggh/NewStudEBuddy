@@ -53,7 +53,7 @@ const apiController = require('./controllers/api');
 const contactController = require('./controllers/contact');
 const flashcardsController = require('./controllers/flashCards');
 const sourceController = require('./controllers/source')
-const openaiController = require('./service/openAPIservice')
+const openaiController = require('./services/openAPIservice')
 /**
  * API keys and Passport configuration.
  */
