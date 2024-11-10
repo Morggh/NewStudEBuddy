@@ -12,3 +12,14 @@ block content
                     p #{set.topic}
     else
         p You have no flash card sets.
+
+    table(class="table table-bordered")
+    thead 
+      tr 
+        th Title 
+        th Topic 
+      tbody
+        each set in flashCardSets 
+          tr 
+            td #{set.name}
+            td #{set.topic}
