@@ -16,6 +16,7 @@ const mongoose = require('mongoose');
 const passport = require('passport');
 const multer = require('multer');
 const rateLimit = require('express-rate-limit');
+const {addCard, getWholeSet } = require('./controllers/flashCards');
 
 const upload = multer({ dest: path.join(__dirname, 'uploads') });
 
