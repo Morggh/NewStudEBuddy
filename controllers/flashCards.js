@@ -27,7 +27,7 @@ exports.getCardSets = async (req, res) => {
 
     // Find flash card sets that belong to the logged-in user
     const flashCardSets = (await FlashCardSet.find({ userId })) || [];
-    console.log(flashCardSets);
+    console.log(toString(flashCardSets));
 
     // Render the Pug template and pass the data (ensure it's always an array)
     res.render('flashCardSets', { flashCardSets });
