@@ -8,6 +8,7 @@ block content
                 li
                     h2 #{set.title}
                     p #{set.description}
+                    window.alert(flashCardSets)
                     ul
                         each card in set.cards
                             li
@@ -16,5 +17,6 @@ block content
                                 br
                                 strong Answer: 
                                     #{card.answer}
-    else
+                                    console.log(card.answer)
+    //else
         p You have no flash card sets.
