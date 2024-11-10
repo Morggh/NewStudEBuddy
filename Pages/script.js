@@ -1,12 +1,14 @@
 
-let cardSet = [];
+function createCardSet(){
+    
+};
 
 function addCardToSet(){
     //identify values
     const cardFront = document.getElementById('cardFront').value;
     const cardBack = document.getElementById('cardBack').value;
 
-    //add to local array
+    //save values to database
     const cardTotal = [cardFront, cardBack]
     cardSet.push(cardFront , cardBack);
     alert(cardTotal);
