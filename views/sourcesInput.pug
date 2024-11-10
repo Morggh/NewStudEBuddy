@@ -7,6 +7,10 @@ mixin cardList(cards)
     each card in cards
       +flashCardSet(card)
 
+mixin box(title)
+  div.box
+
+
 block content 
     .col-md-6
       h2 Text Box
@@ -15,5 +19,6 @@ block content
         input(type="text" name="title" placeholder=" ")
         input(type="submit")
     .col-md-6 
+    +box('Testing Title')
     +flashCardSet(['test', 'test 2' , 'test 3'])
     +flashCardSet(['example1', 'example2'])
