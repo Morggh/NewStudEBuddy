@@ -1,10 +1,10 @@
-import OpenAI from "openai";
+const OpenAI = require('openai')
 
 const fetch = require('node-fetch');
 const openai = new OpenAI();
 
 async function defineRequest(prompt) {
-    const requestData = {
+    const requestData =  {
         model: "gpt-4o-mini",
         response_format: {type: "json_object"
         },
