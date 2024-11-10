@@ -8,7 +8,7 @@ exports.sendCardSet = async (req, res) => {
       name: req.body.name,
       topic: req.body.topic
     });
-    await flashcard.save();
+    await flash_card_set.save();
     res.redirect('/create_resource');
   } catch (error) {
     res.status(500).send("Error generating flash card set: " + error.message); // Send error response
@@ -26,7 +26,7 @@ exports.getCardSets = async (req, res) => {
     const userId = req.user._id;
 
     // Find flash card sets that belong to the logged-in user
-    const flashCardSets = (await FlashCardSet.find({ userId })) || [];
+    const flashCardSets = (await flashCardSets.find({ userId })) || [];
     console.log(flashCardSets);
 
     // Render the Pug template and pass the data (ensure it's always an array)
