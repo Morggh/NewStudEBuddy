@@ -1,22 +1,12 @@
-extends layout 
+extends layout
 block content 
   h2 My Sets
     //Check if there are any flash card sets
-    if flashCardSets[0] !=empty
+    if flashCardSets.length > 0
         ul
             each set in flashCardSets
                 li
-                    h2 #{set.title}
-                    p #{set.description}
-                    window.alert(flashCardSets)
-                    ul
-                        each card in set.cards
-                            li
-                                strong Question: 
-                                    #{card.question}
-                                br
-                                strong Answer: 
-                                    #{card.answer}
-                                    console.log(card.answer)
-    //else
+                    h2 #{set.name}
+                    p #{set.topic}
+    else
         p You have no flash card sets.
