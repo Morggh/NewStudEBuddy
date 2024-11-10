@@ -33,7 +33,7 @@ exports.getCardSets = async (req, res) => {
 
     res.status(200).json(flashCardSets);
   }catch (error) {
-    res.status(500).json({ message: 'Error fetching flash card sets', error });
+    res.render('cardsOverview', { flashCardSets: [] });
   }
 }
 
