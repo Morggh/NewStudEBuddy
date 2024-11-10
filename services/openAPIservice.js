@@ -1,7 +1,7 @@
-const OpenAI = require('openai')
+// const OpenAI = require('openai')
 
 const fetch = require('node-fetch');
-const openai = new OpenAI();
+// const openai = new OpenAI();
 
 async function defineRequest(prompt) {
     const requestData =  {
