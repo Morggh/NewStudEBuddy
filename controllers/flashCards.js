@@ -21,7 +21,6 @@ exports.getCardSets = async (req, res) => {
     if (!req.isAuthenticated()) {
         return res.status(401).json({ message: 'Unauthorized' });
     }
-
     // Get the userId from the logged-in user
     const userId = req.user._id;
 
