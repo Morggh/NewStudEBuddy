@@ -19,31 +19,13 @@ block content
         +box('Title 2', 'topic2')
           <br>
           p(style="align-self:flex-end; margin-top:10px;") topic2
-    a.btn.btn-primary(href='/cardsOverview', role='button') Show all sets »
+      a.btn.btn-primary(href='/cardsOverview', role='button') Show all sets »
     .col-md-6
       h2 Quick Start
       form(href ='/', method="POST")
         p Passage to generate from:
         input(type='hidden', name='_csrf', value=_csrf)
-        input(type="submit", href="cardsOverview" style="margin-bottom:5px; box-shadow: 3px 3px 5px black;")
+        input(type="submit", href="cardsOverview" style="margin:5px; box-shadow: 3px 3px 5px black;")
         input(type="text", name="term", placeholder=" " style="height:500px; width:600px; box-shadow:3px 3px 5px darkgrey;")
-
-        h2 Testing DB
-        console.log(flashCardSets)
-        console.log(flashCardSet)
-        // Check if there are any flash card sets
-        if flashCardSets.length > 0
-          ul
-            each set in flashCardSets
-              li
-                h2 #{set.name}
-                p #{set.topic}
-        else
-            p You have no flash card sets.
-
-  // Display entered text from form (for demonstration purposes)
-  h2 You entered:
-  p(id="displayInput") 
-
 
       
