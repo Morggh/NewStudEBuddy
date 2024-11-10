@@ -12,14 +12,13 @@ block content
 
   hr
   .row
-    .col-md-6(style='display:flex; border:5px solid lightblue;')
-      h2(style="color:blue; align-self:flex-start;") My Sets
-      div(style=" border:3px solid pink;")
-        +box('Title 1', 'topic', style=" display:inline; color:red;")
-          <br> 
+    .col-md-6(style='display: flex; flex-direction: column; align-items: flex-start; padding: 10px;')
+      h2(style="color:blue; margin-bottom:15px;") My Sets
+      div(style=" display:flex; flex-direction:column; gap:10px;")
+        +box('Title 1', 'topic')
         +box('Title 2', 'topic2')
           <br>
-          p(align-self:flex-end) topic2
+          p(align-self:flex-end; margin-top:10px;) topic2
       a.btn.btn-primary(href='/cardsOverview', role='button') Show all sets »
     .col-md-6
       h2 Quick Start
