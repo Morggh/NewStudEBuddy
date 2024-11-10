@@ -5,8 +5,8 @@ const flash_cardSchema = new mongoose.Schema({
     //cardsetID: {type: mongoose.Schema.Types.ObjectId, ref: 'Flash_card_set'},
     term: String,
     content: String
-})
+});
 
-const Flashcard = mongoose.model('Flashcard', flash_cardSchema);
+const Flashcard = mongoose.model('flashcards', flash_cardSchema);
 
 module.exports = Flashcard;
