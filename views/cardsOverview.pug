@@ -13,11 +13,11 @@ block content
     else
         p You have no flash card sets.
 
-    table(class="table table-bordered")
+    table(style="width:80%; margin:auto; border:3px grey; box-shadow:5px 3px 3px darkgrey;")
     thead 
       tr 
-        th Title 
-        th Topic 
+        th(style="text-align:center;") Title 
+        th(style="text-align:center;") Topic 
       tbody
         each set in flashCardSets 
           tr 
