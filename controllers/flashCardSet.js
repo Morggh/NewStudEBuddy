@@ -1,7 +1,7 @@
 const Flash_card_set = require('../models/Flash_card_set');
 
 exports.renderForm = (req, res) => {
-    res.render('flashCard_New', { title: 'User Input Form' });
+    res.render('cardsOverview', { title: 'User Input Form' });
   };
   
 exports.sendCardSet = async (req, res) => {

@@ -1,4 +1,4 @@
 exports.renderForm = (req, res) => {
-    res.render('sourcesInput', { title: 'Source Input' });
+    res.render('create_resources', { title: 'Source Input' });
   };
   
