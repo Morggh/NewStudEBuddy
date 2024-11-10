@@ -26,3 +26,8 @@ exports.sendCard = async (req, res) => {
     res.status(500).send("Error saving flashcard: " + error.message); // Send error response
   }
 };
+
+exports.renderOverviewForm = (req, res) => {
+  res.render('cardsOverview', { title: 'Data Sets' });
+};
+
