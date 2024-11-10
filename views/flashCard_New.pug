@@ -1,16 +1,16 @@
-//- doctype html
-//- html 
-//-   head
-//-     title Create New Set
-//-     a.nav-link(class=(title === 'Home') ? 'active' : '', href='/') Home
-//-   body
-//-     h1 New Study Set
-//-     form(action="/add-item", method="POST")
-//-       div 
-//-         label(for="term") Term: 
-//-         input(type="text", name="term", id="term", required)
-//-       div
-//-         label(for="content") Content: 
-//-         input(type="text", name="content", id="content", required)
-//-       div 
-//-         button(type="submit") Add Card
+doctype html
+html 
+  head
+    title Create New Set
+    a.nav-link(class=(title === 'Home') ? 'active' : '', href='/') Home
+  body
+    h1 New Study Set
+    form(action="/add-item", method="POST")
+      div 
+        label(for="term") Term: 
+        input(type="text", name="term", id="term", required)
+      div
+        label(for="content") Content: 
+        input(type="text", name="content", id="content", required)
+      div 
+        button(type="submit") Add Card
