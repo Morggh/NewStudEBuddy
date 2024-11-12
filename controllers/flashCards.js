@@ -9,7 +9,7 @@ exports.sendCardSet = async (req, res) => {
       topic: req.body.topic
     });
     await flash_card_set.save();
-    // res.redirect('/create_resource/');
+    res.redirect('/create_resource/');
   } catch (error) {
     res.status(500).send("Error generating flash card set: " + error.message); // Send error response
   }
